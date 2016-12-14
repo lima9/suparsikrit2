@@ -1,0 +1,10 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+app/node_modules/npm/node_modules/request/node_modules/har-validator/node_modules/commander/node_modules/
+app/platforms/
+app/plugins/
+app/node_modules/
+server/node_modules/
+server/.idea/
+

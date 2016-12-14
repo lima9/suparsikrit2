@@ -1,0 +1,10 @@
+<ion-view view-title="Student">
+  <ion-content>
+    <h1>Student detail</h1>
+    <h2>{{student.name}}</h2>
+    <p>{{student.description}}</p>
+    <p>{{student.address}}</p>
+    <p ng-show="student.phones[0].work">Work phone: {{student.phones[0].work}}</p>
+    <p ng-show="student.phones[0].home">Home phone: {{student.phones[0].home}}</p>
+  </ion-content>
+</ion-view>

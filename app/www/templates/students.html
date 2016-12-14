@@ -1,0 +1,13 @@
+<ion-view view-title="Students">
+  <ion-content>
+    <h1>Students</h1>
+    <button class="button button-royal" ng-click="studentsOrderByMe('name')">
+      Sort alphabetically
+    </button>
+    <ion-list>
+      <ion-item ng-repeat="student in students | orderBy:myStudentsOrderBy" href="#/app/students/{{student._id}}">
+        {{student.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
