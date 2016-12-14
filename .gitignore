@@ -7,4 +7,6 @@ app/plugins/
 app/node_modules/
 server/node_modules/
 server/.idea/
+app/.idea/
+.idea/
 
