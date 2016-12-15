@@ -35,11 +35,16 @@ exports.addStudent = function (req, res) {
 
 /**GET Find student by student._id**/
 exports.findStudentById = function (req, res) {
-    studentModel.findById(req.params.id, function (err, student) {
+    studentModel.findById(req.params.id, function (err) {
         if (err) return res.send(500, err.message);
-        res.status(200).jsonp(student);
-    });
+    })
+        .populate('phones')
+        .exec(function(error, student) {
+            console.log(JSON.stringify(student, null, "\t"));
+            res.status(200).jsonp(student);
+        });
 };
+
 
 /**GET a list of all Subjects**/
 exports.findAllSubjects = function (req, res) {

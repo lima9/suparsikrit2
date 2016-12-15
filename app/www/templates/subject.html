@@ -1,10 +1,10 @@
 <ion-view view-title="Subject">
   <ion-content>
     <h1>Subject detail</h1>
-    <h2>{{subject.name}}</h2>
-    <p>{{subject.description}}</p>
-    <p>{{subject.when}}</p>
-    <h2 ng-show="subject.students.length>0">Students of the subject:</h2>
+    <h2>Name: {{subject.name}}</h2>
+    <p>Description: {{subject.description}}</p>
+    <p>Date: {{subject.when}}</p>
+   <h2 ng-show="subject.students.length>0">Students of the subject:</h2>
     <ion-list>
       <ion-item ng-repeat="student in subject.students" href="#/app/students/{{student._id}}">
         {{student.name}}
