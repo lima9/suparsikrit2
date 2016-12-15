@@ -6,11 +6,20 @@
     <p>Address: {{student.address}}</p>
     <p>Phones: </p>
     <ion-list>
-      <ion-item ng-repeat="name in student.phones">
-        {{student.phones}}
-      </ion-item>
-    <p>{{student.phones}}</p>
-    <!--<p ng-show="student.phones[0].work">Work phone: {{student.phones[0].work}}</p>
-    <p ng-show="student.phones[0].home">Home phone: {{student.phones[0].home}}</p>-->
+      <ion-list>
+        <ion-item >
+        <p>Name: {{student.phones[0].name}}</p>
+        <p>Address: {{student.phones[0].address}}</p>
+        </ion-item>
+        <ion-item>
+        <p>Name: {{student.phones[1].name}}</p>
+        <p>Address: {{student.phones[1].address}}</p>
+        </ion-item>
+        <ion-item>
+          <p>Name: {{student.phones[2].name}}</p>
+          <p>Address: {{student.phones[2].address}}</p>
+        </ion-item>
+      </ion-list>
+      </ion-list>
   </ion-content>
 </ion-view>
