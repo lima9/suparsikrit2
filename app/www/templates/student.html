@@ -5,6 +5,10 @@
     <p>Description: {{student.description}}</p>
     <p>Address: {{student.address}}</p>
     <p>Phones: </p>
+    <ion-list>
+      <ion-item ng-repeat="name in student.phones">
+        {{student.phones}}
+      </ion-item>
     <p>{{student.phones}}</p>
     <!--<p ng-show="student.phones[0].work">Work phone: {{student.phones[0].work}}</p>
     <p ng-show="student.phones[0].home">Home phone: {{student.phones[0].home}}</p>-->
