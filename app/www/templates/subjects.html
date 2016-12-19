@@ -1,12 +1,14 @@
 <ion-view view-title="Subjects">
   <ion-content>
     <h1>Subjects</h1>
+    <div class="button-bar">
     <button class="button button-dark" ng-click="subjectsOrderByMe('name')">
       Sort alphabetically
     </button>
     <button class="button button-balanced" ng-click="subjectsOrderByMe('-students.length')">
       Sort by nº of students
     </button>
+    </div>
     <ion-list>
       <ion-item ng-repeat="subject in subjects | orderBy:mySubjectsOrderBy" href="#/app/subjects/{{subject._id}}">
         {{subject.name}}
