@@ -7,19 +7,23 @@
     <p>Phones: </p>
     <ion-list>
       <ion-list>
-        <ion-item >
-        <p>Name: {{student.phones[0].name}}</p>
-        <p>Address: {{student.phones[0].address}}</p>
+        <ion-item>
+          <p>Name: {{student.phones[0].name}}</p>
+          <p>Address: {{student.phones[0].address}}</p>
         </ion-item>
         <ion-item>
-        <p>Name: {{student.phones[1].name}}</p>
-        <p>Address: {{student.phones[1].address}}</p>
+          <p>Name: {{student.phones[1].name}}</p>
+          <p>Address: {{student.phones[1].address}}</p>
         </ion-item>
         <ion-item>
           <p>Name: {{student.phones[2].name}}</p>
           <p>Address: {{student.phones[2].address}}</p>
         </ion-item>
       </ion-list>
-      </ion-list>
+    </ion-list>
   </ion-content>
 </ion-view>
+
+<!--<p ng-repeat="phone in student.phones">Phones:  </p>
+<a class="subdued">Work phone: {{phone.work}}</a>
+<a class="subdued">Home phone: {{phone.home}}</a>-->
