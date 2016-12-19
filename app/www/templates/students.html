@@ -5,10 +5,22 @@
     <button class="button button-royal" ng-click="studentsOrderByMe('name')">
       Sort alphabetically
     </button>
+      <button class="button button-calm" ng-click="studentsOrderByMe('-subjects')">
+        Sort by enrolled subjects
+      </button>
+    </div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Find the Student" ng-model="filterstudent">
+      </label>
     </div>
     <ion-list>
-      <ion-item ng-repeat="student in students | orderBy:myStudentsOrderBy" href="#/app/students/{{student._id}}">
+      <ion-item ng-repeat="student in students | filter:filterstudent | orderBy:myStudentsOrderBy" href="#/app/students/{{student._id}}">
         {{student.name}}
+        <span class="item-note">
+          {{student.subjects.length}} subjects
+        </span>
       </ion-item>
     </ion-list>
   </ion-content>

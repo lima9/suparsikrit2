@@ -12,7 +12,11 @@ var studentSchema = new Schema({
             name: {type: String},
             address: {type: Number}
         }
-    ]
+    ],
+    subjects: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'subjectModel'
+    }]
 });
 
 studentSchema.plugin(mongooseUniqueValidator);

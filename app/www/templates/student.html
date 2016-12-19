@@ -1,33 +1,30 @@
 <ion-view view-title="Student">
-  <ion-content>
-    <!--<h1>Student detail</h1>-->
-    <h2>Name: {{student.name}}</h2>
-    <p><i class="icon ion-university"></i>Description: {{student.description}}</p>
-    <p><i class="icon ion-ios-paper"></i>Address: {{student.address}}</p>
-    <p><i class="icon ion-android-phone-portrait"></i>Phones: </p>
-    <ion-list>
-      <ion-list>
-        <ion-list ng-repeat="phone in student.phones">
-          <ion-item>
-            <p><i class="icon ion-ios-person"></i>  {{phone.name}}</p>
-            <p><i class="icon ion-social-whatsapp"></i>   "{{phone.address}}"</p>
-          </ion-item>
+    <ion-content>
+        <!--<h1>Student detail</h1>-->
+        <h2>Name: {{student.name}}</h2>
+        <p><i class="icon ion-university"></i>Description: {{student.description}}</p>
+        <p><i class="icon ion-ios-paper"></i>Address: {{student.address}}</p>
+        <p><i class="icon ion-android-phone-portrait"></i>Phones: </p>
+        <ion-list>
+            <ion-list>
+                <ion-list ng-repeat="phone in student.phones">
+                    <ion-item>
+                        <p><i class="icon ion-ios-person"></i> {{phone.name}}</p>
+                        <p><i class="icon ion-social-whatsapp"></i> "{{phone.address}}"</p>
+                    </ion-item>
+                </ion-list>
+            </ion-list>
         </ion-list>
-        <!--<ion-item>
-          <p>Name: {{student.phones[0].name}}</p>
-          <p>Address: {{student.phones[0].address}}</p>
-        </ion-item>
-        <ion-item>
-          <p>Name: {{student.phones[1].name}}</p>
-          <p>Address: {{student.phones[1].address}}</p>
-        </ion-item>
-        <ion-item>
-          <p>Name: {{student.phones[2].name}}</p>
-          <p>Address: {{student.phones[2].address}}</p>
-        </ion-item>-->
-      </ion-list>
-    </ion-list>
-  </ion-content>
+        <ion-list>
+            <ion-list>
+                <ion-list ng-repeat="subjects in student.subjects">
+                    <ion-item>
+                        <a href="#/app/subjects/by/id/{{subjects._id}}"class="button button-outline button-positive">Link to Subject</a>
+                    </ion-item>
+                </ion-list>
+            </ion-list>
+        </ion-list>
+    </ion-content>
 </ion-view>
 
 <!--<p ng-repeat="phone in student.phones">Phones:  </p>

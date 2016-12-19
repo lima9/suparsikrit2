@@ -11,9 +11,12 @@ var crypto = require('crypto');
 /**GET list of all students**/
 exports.findAllStudents = function (req, res) {
     studentModel.find(function (err, students) {
-        if (err) res.send(500, err.message);
-        res.status(200).jsonp(students);
-    });
+    })
+        .populate('subjects')
+        .exec(function(error, subjects) {
+            console.log(JSON.stringify(subjects, null, "\t"));
+            res.status(200).jsonp(subjects);
+        });
 };
 
 /**POST add new student to DB**/
@@ -33,15 +36,15 @@ exports.addStudent = function (req, res) {
     });
 };
 
-/**GET Find student by student._id**/
+/**GET Find subject by student._id**/
 exports.findStudentById = function (req, res) {
     studentModel.findById(req.params.id, function (err) {
         if (err) return res.send(500, err.message);
     })
-        .populate('phones')
-        .exec(function(error, student) {
-            console.log(JSON.stringify(student, null, "\t"));
-            res.status(200).jsonp(student);
+        .populate('subjects')
+        .exec(function(error, subjects) {
+            console.log(JSON.stringify(subjects, null, "\t"));
+            res.status(200).jsonp(subjects);
         });
 };
 
